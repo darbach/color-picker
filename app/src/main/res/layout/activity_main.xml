@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity"
+  android:padding="@dimen/half_dynamic_spacing">
+
+  <LinearLayout
+    android:id="@+id/red_controls"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/quad_dynamic_spacing"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <SeekBar
+      android:id="@+id/red_slider"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/half_dynamic_spacing"
+      android:layout_weight="4"/>
+
+    <TextView
+      android:id="@+id/red_label"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/half_dynamic_spacing"
+      android:layout_weight="1"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/green_controls"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/quad_dynamic_spacing"
+    app:layout_constraintTop_toBottomOf="@id/red_controls"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <SeekBar
+      android:id="@+id/green_slider"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/half_dynamic_spacing"
+      android:layout_weight="4"/>
+
+    <TextView
+      android:id="@+id/green_label"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/half_dynamic_spacing"
+      android:layout_weight="1"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/blue_controls"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/quad_dynamic_spacing"
+    app:layout_constraintTop_toBottomOf="@id/green_controls"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <SeekBar
+      android:id="@+id/blue_slider"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/half_dynamic_spacing"
+      android:layout_weight="4"/>
+
+    <TextView
+      android:id="@+id/blue_label"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/half_dynamic_spacing"
+      android:layout_weight="1"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/output"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    app:layout_constraintTop_toBottomOf="@id/blue_controls"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <TextView
+      android:id="@+id/color_display"
+      android:layout_width="150dp"
+      android:layout_height="150dp"
+      android:background="@color/black"/>
+
+  </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
